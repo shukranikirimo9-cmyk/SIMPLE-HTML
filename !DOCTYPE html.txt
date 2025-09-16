@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shuks Tech Solutions</title>
+  <style>
+    :root{
+      --brand-dark:#062b5a;
+      --brand-mid:#0a49a6;
+      --brand-light:#38a3ff;
+      --accent:#6ff3c5;
+    }
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:#f5f7fb; color:#12223f;}
+    header{background:linear-gradient(90deg,var(--brand-dark),var(--brand-mid)); color:#fff; padding:18px 20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+    .logo-wrap{display:flex; align-items:center; gap:14px;}
+    .logo-svg{height:64px; width:auto; display:block;}
+    .site-title{font-size:20px; font-weight:700; letter-spacing:0.4px; margin:0;}
+    .site-tag{font-size:13px; opacity:0.95; margin:0;}
+    nav{background:#11366a; padding:10px 12px; text-align:center;}
+    nav a{color:#fff; text-decoration:none; margin:0 12px; font-weight:600;}
+    .container{max-width:1100px; margin:28px auto; padding:0 18px;}
+    .hero{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
+    .hero .intro{flex:1; min-width:260px;}
+    .hero h1{font-size:28px; margin:0 0 8px;}
+    .hero p{margin:0 0 12px; color:#27425a;}
+    .cta{display:inline-block; background:var(--brand-mid); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700;}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:20px;}
+    .card{background:#fff; border-radius:12px; padding:14px; box-shadow:0 6px 18px rgba(8,33,71,0.06); display:flex; flex-direction:column; gap:12px;}
+    .card img{width:100%; border-radius:8px; display:block;}
+    .card h3{margin:0; font-size:18px;}
+    .card p{margin:0; color:#3b4b63; font-size:14px;}
+    .wh-btn{display:inline-block; margin-top:auto; background:#25D366; color:#03211b; font-weight:700; padding:9px 12px; border-radius:10px; text-decoration:none; text-align:center;}
+    section h2{font-size:20px; color:var(--brand-dark); margin:0 0 12px;}
+    form{max-width:560px; margin:18px auto; background:#fff; padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(8,33,71,0.06);}
+    input,select,textarea{width:100%; padding:10px; border-radius:8px; border:1px solid #d6e0ef; margin-top:8px; font-size:14px; box-sizing:border-box;}
+    button{background:var(--brand-mid); color:#fff; border:none; padding:12px 14px; border-radius:10px; font-weight:700; cursor:pointer; width:100%;}
+    footer{padding:22px; text-align:center; color:#fff; background:linear-gradient(90deg,var(--brand-dark),var(--brand-mid)); margin-top:28px;}
+    .top-links{margin-left:auto; display:flex; gap:12px;}
+    @media(max-width:760px){
+      .logo-svg{height:56px;}
+      .hero h1{font-size:22px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with embedded stylish wide SVG logo -->
+  <header>
+    <div class="logo-wrap">
+      <!-- Wide SVG logo: symbol + text -->
+      <svg class="logo-svg" viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shuks Tech Solutions logo">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#1e74ff"/>
+            <stop offset="1" stop-color="#5de0c1"/>
+          </linearGradient>
+          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0a3160" flood-opacity="0.18"/>
+          </filter>
+        </defs>
+
+        <!-- Symbol: stylized monitor + circuit + headset arc -->
+        <g transform="translate(8,10)" filter="url(#shadow)">
+          <!-- monitor -->
+          <rect x="0" y="8" rx="14" ry="14" width="140" height="88" fill="url(#g1)"/>
+          <!-- screen inner -->
+          <rect x="10" y="18" width="120" height="60" rx="8" ry="8" fill="#fff" opacity="0.06"/>
+          <!-- circuit lines -->
+          <circle cx="40" cy="38" r="5" fill="#fff" opacity="0.95"/>
+          <rect x="46" y="36" width="40" height="4" rx="2" ry="2" fill="#fff" opacity="0.85"/>
+          <circle cx="92" cy="38" r="4" fill="#fff" opacity="0.9"/>
+          <!-- headset arc -->
+          <path d="M10 18 Q70 -8 130 18" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-opacity="0.85"/>
+          <!-- small nodes on arc -->
+          <circle cx="40" cy="6" r="3" fill="#fff"/>
+          <circle cx="100" cy="6" r="3" fill="#fff"/>
+        </g>
+
+        <!-- Text: Shuks Tech Solutions -->
+        <g transform="translate(168,42)">
+          <text x="0" y="0" font-family="Segoe UI, Roboto, Arial" font-weight="800" font-size="28" fill="#ffffff">Shuks</text>
+          <text x="88" y="0" font-family="Segoe UI, Roboto, Arial" font-weight="700" font-size="28" fill="#ffffff">Tech</text>
+          <text x="168" y="0" font-family="Segoe UI, Roboto, Arial" font-weight="600" font-size="20" fill="#dff6f0">Solutions</text>
+          <text x="0" y="28" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#d6f5ee">Professional repairs • Internet • Software • Sales</text>
+        </g>
+      </svg>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:12px; margin-left:12px;">
+      <div style="color:#fff;">
+        <p style="margin:0; font-weight:700;" class="site-title">Shuks Tech Solutions</p>
+        <p style="margin:0; font-size:12px; opacity:0.95;" class="site-tag">Repairs • Installations • Sales</p>
+      </div>
+    </div>
+
+    <div class="top-links" style="margin-left:auto;">
+      <a class="cta" href="#book" style="background:#fff; color:var(--brand-mid); border-radius:10px; padding:8px 12px; text-decoration:none; font-weight:800;">Book Service</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#book">Book</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="intro">
+        <h1 id="hero-title">Reliable device repair & IT services — fast and affordable</h1>
+        <p>We fix computers & phones, install internet and software, and sell quality accessories. Book a service or message us on WhatsApp now.</p>
+        <a class="cta" href="#book">Request a service</a>
+      </div>
+      <div style="min-width:260px; max-width:420px;">
+        <!-- hero visual, placeholder showing tech device -->
+        <img src="https://source.unsplash.com/420x280/?technology,repair,laptop" alt="Tech hero" style="width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(8,33,71,0.08);">
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>💻 Computer Repair</h3>
+          <p>Desktop & laptop repairs — hardware, data recovery, upgrades, and tune-ups.</p>
+        </div>
+        <div class="card">
+          <h3>📱 Phone Repair</h3>
+          <p>Screen replacements, battery swaps, water damage checks and software fixes.</p>
+        </div>
+        <div class="card">
+          <h3>🌐 Internet Installation</h3>
+          <p>Home & office Wi-Fi setup, router configuration and network troubleshooting.</p>
+        </div>
+        <div class="card">
+          <h3>🛠 Software Installation</h3>
+          <p>OS installs, antivirus, business software, and driver setups.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products section with images and order on WhatsApp buttons -->
+    <section id="products" aria-labelledby="products-title">
+      <h2 id="products-title">Products</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://source.unsplash.com/600x400/?laptop,computer" alt="Laptop">
+          <h3>Laptops</h3>
+          <p>Quality laptops for work and play — brands we stock: HP, Dell, Lenovo, ASUS.</p>
+          <a class="wh-btn" href="https://wa.me/254757708757?text=Hi%20Shuks%20Tech%20Solutions%2C%20I%27m%20interested%20in%20a%20laptop" target="_blank">Order on WhatsApp</a>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/600x400/?desktop,computer" alt="Desktop computer">
+          <h3>Desktops</h3>
+          <p>Custom-built desktop PCs — gaming rigs, office machines, and servers.</p>
+          <a class="wh-btn" href="https://wa.me/254757708757?text=Hi%20Shuks%20Tech%20Solutions%2C%20I%27m%20interested%20in%20a%20desktop%20computer" target="_blank">Order on WhatsApp</a>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/600x400/?earbuds,earpods,wireless" alt="Earpods">
+          <h3>Earpods</h3>
+          <p>Wireless earpods with clear audio and long battery life — perfect for calls and music.</p>
+          <a class="wh-btn" href="https://wa.me/254757708757?text=Hi%20Shuks%20Tech%20Solutions%2C%20I%27m%20interested%20in%20earpods" target="_blank">Order on WhatsApp</a>
+        </div>
+
+        <div class="card">
+          <img src="https://source.unsplash.com/600x400/?earphones,headphones,wire" alt="Earphones">
+          <h3>Earphones</h3>
+          <p>Wired and wireless earphones — affordable and high quality for daily use.</p>
+          <a class="wh-btn" href="https://wa.me/254757708757?text=Hi%20Shuks%20Tech%20Solutions%2C%20I%27m%20interested%20in%20earphones" target="_blank">Order on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking form (Formspree) -->
+    <section id="book" aria-labelledby="book-title">
+      <h2 id="book-title">Book a Service</h2>
+      <form id="serviceForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" required>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" required>
+
+        <label for="service">Select Service</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose a service --</option>
+          <option>Computer Repair</option>
+          <option>Phone Repair</option>
+          <option>Internet Installation</option>
+          <option>Software Installation</option>
+        </select>
+
+        <label for="message">Additional Details</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Us</h2>
+      <p>📞 Phone: <a href="tel:0740127065">0740127065</a></p>
+      <p>💬 WhatsApp: <a href="https://wa.me/254757708757" target="_blank">Chat with us</a></p>
+      <p>📧 Email: <a href="mailto:shukranikirimo9@gmail.com">shukranikirimo9@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shuks Tech Solutions — All rights reserved</p>
+  </footer>
+
+  <!-- Form behavior: send to Formspree then redirect user to WhatsApp with pre-filled message -->
+  <script>
+    document.getElementById('serviceForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = this;
+      const data = new FormData(form);
+      // send to Formspree
+      fetch(form.action, { method: form.method, body: data, headers:{ 'Accept':'application/json' }})
+        .then(response=> {
+          // After sending email, redirect to WhatsApp with prefilled message
+          const name = encodeURIComponent(data.get('name') || '');
+          const phone = encodeURIComponent(data.get('phone') || '');
+          const service = encodeURIComponent(data.get('service') || '');
+          const details = encodeURIComponent(data.get('message') || '');
+          const wa = '254757708757'; // your whatsapp number with country code
+          const text = `Hello Shuks Tech Solutions, my name is ${name}. I need ${service}. Phone: ${phone}. Details: ${details}`;
+          window.location.href = 'https://wa.me/' + wa + '?text=' + encodeURIComponent(text);
+        })
+        .catch(err => {
+          // even if error, still try to open whatsapp so user can contact you
+          const name = encodeURIComponent(data.get('name') || '');
+          const phone = encodeURIComponent(data.get('phone') || '');
+          const service = encodeURIComponent(data.get('service') || '');
+          const details = encodeURIComponent(data.get('message') || '');
+          const wa = '254757708757';
+          const text = `Hello Shuks Tech Solutions, my name is ${name}. I need ${service}. Phone: ${phone}. Details: ${details}`;
+          window.location.href = 'https://wa.me/' + wa + '?text=' + encodeURIComponent(text);
+        });
+    });
+  </script>
+</body>
+</html>
